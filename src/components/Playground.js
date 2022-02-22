@@ -1,8 +1,8 @@
 import React from "react";
-import { Form, FormGroup, Row, Col, Button, Container } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 import Editor from "./utils/Editor";
 import ResponseBox from "./utils/ResponseBox";
-//import RunApi from '../utils/RunApi';
+import RunApi from "./utils/RunApi";
 
 import "../styles.css";
 
@@ -30,15 +30,15 @@ class PlayGround extends React.Component {
   handleRun(event) {
     event.preventDefault();
     const { code } = this.state;
-    console.log(code);
-    /*
-        RunApi.run(code)
-            .then((res) => {
-                this.setState({res: res});
-            }).catch((error) => {
-                console.log(error);
-            });
-            */
+    console.log("Running code: " + code);
+
+    RunApi.run(code)
+      .then((response) => {
+        this.setState({ res: response });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   render() {
@@ -47,7 +47,7 @@ class PlayGround extends React.Component {
         <div className="editor">
           <Editor onChange={this.handleCodeChange} code={this.state.code} />
         </div>
-        <div class="result-panel">
+        <div className="result-panel">
           <div className="info-box">
             <Form>
               <Form.Group controlId="info">
