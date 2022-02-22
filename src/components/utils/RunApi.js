@@ -1,13 +1,24 @@
 class RunApi {
   static run(code) {
     const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "appilication/json" },
-      body: JSON.stringify(code)
+      method: "GET",
+      headers: {
+        "Content-Type": "appilication/json"
+      }
+      //body: JSON.stringify(code)
     };
-    return fetch("${process.env.API_URL}/api/run/", requestOptions)
-      .then((response) => response.json())
+    /*
+    ${process.env.API_URL}/api/run/
+    https://express-simple-rgp893--3000.local.webcontainer.io
+    */
+    return fetch(
+      "https://express-simple-rgp893--3000.local.webcontainer.io/test/",
+      requestOptions
+    )
       .then(console.log(requestOptions))
+      .then((response) => {
+        return response.json();
+      })
       .catch((error) => {
         throw error;
       });
