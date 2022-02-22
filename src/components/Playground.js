@@ -4,6 +4,8 @@ import Editor from "./utils/Editor";
 import ResponseBox from "./utils/ResponseBox";
 //import RunApi from '../utils/RunApi';
 
+import "../styles.css";
+
 class PlayGround extends React.Component {
   constructor(props) {
     super(props);
@@ -41,36 +43,30 @@ class PlayGround extends React.Component {
 
   render() {
     return (
-      <Container fluid>
-        <Form horizontal="false">
-          <FormGroup>
-            <Col>
-              <Editor onChange={this.handleCodeChange} code={this.state.code} />
-            </Col>
-          </FormGroup>
-          <FormGroup>
-            <Col>
-              <Row sm={6}>
-                <Form>
-                  <Form.Group controlId="info">
-                    <Form.Label>Info</Form.Label>
-                  </Form.Group>
-                </Form>
-              </Row>
-              <Row sm={1}>
-                <Button type="button" onClick={this.handleRun}>
-                  Run
-                </Button>
-              </Row>
-              <Row sm={5}>
-                <ResponseBox>
-                  show={this.state.res.runStatus}
-                  message={this.state.res.message}
-                </ResponseBox>
-              </Row>
-            </Col>
-          </FormGroup>
-        </Form>
+      <Container>
+        <div className="editor">
+          <Editor onChange={this.handleCodeChange} code={this.state.code} />
+        </div>
+        <div class="result-panel">
+          <div className="info-box">
+            <Form>
+              <Form.Group controlId="info">
+                <Form.Label>Info</Form.Label>
+              </Form.Group>
+            </Form>
+          </div>
+          <div className="run-button">
+            <Button type="button" onClick={this.handleRun}>
+              Run
+            </Button>
+          </div>
+          <div className="result-box">
+            <ResponseBox>
+              show={this.state.res.runStatus}
+              message={this.state.res.message}
+            </ResponseBox>
+          </div>
+        </div>
       </Container>
     );
   }
@@ -78,6 +74,36 @@ class PlayGround extends React.Component {
 
 export default PlayGround;
 /*
+render() {
+    return (
+      <Container fluid>
+        <Col>
+          <Editor onChange={this.handleCodeChange} code={this.state.code} />
+        </Col>
+        <Col>
+          <Row sm={6}>
+            <Form>
+              <Form.Group controlId="info">
+                <Form.Label>Info</Form.Label>
+              </Form.Group>
+            </Form>
+          </Row>
+          <Row sm={1}>
+            <Button type="button" onClick={this.handleRun}>
+              Run
+            </Button>
+          </Row>
+          <Row sm={5}>
+            <ResponseBox>
+              show={this.state.res.runStatus}
+              message={this.state.res.message}
+            </ResponseBox>
+          </Row>
+        </Col>
+      </Container>
+    );
+  }
+}
 return (
         <div className='container'>
           <Form horizontal='true'>

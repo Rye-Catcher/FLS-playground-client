@@ -7,7 +7,12 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-monokai";
 
 const editorstyle = {
-  boarder: "1px solid lightgray"
+  boarder: "1px solid lightgray",
+  width: "100%",
+  height: "100%",
+  overflow: "hidden",
+  position: "relative",
+  padding: "10px"
 };
 
 class Editor extends React.Component {
@@ -26,7 +31,6 @@ class Editor extends React.Component {
       <AceEditor
         onChange={this.onChange}
         style={editorstyle}
-        width="50%"
         mode="java"
         theme="monokai"
         fontSize={14}

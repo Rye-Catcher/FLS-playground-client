@@ -1,6 +1,14 @@
 import React from "react";
 import { FormControl } from "react-bootstrap";
 
+const boxStyle = {
+  boarder: "1px solid lightgray",
+  width: "100%",
+  height: "100%",
+  overflow: "hidden",
+  position: "relative"
+};
+
 class ResponseBox extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +18,7 @@ class ResponseBox extends React.Component {
   render() {
     return (
       <FormControl
+        style={boxStyle}
         name="code"
         type="textarea"
         componentclass="textarea"
