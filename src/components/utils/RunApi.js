@@ -1,18 +1,18 @@
 class RunApi {
   static run(code) {
     const requestOptions = {
-      method: "GET",
+      method: "POST",
       headers: {
-        "Content-Type": "appilication/json"
-      }
-      //body: JSON.stringify(code)
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ code: code })
     };
     /*
     ${process.env.API_URL}/api/run/
     https://express-simple-rgp893--3000.local.webcontainer.io
     */
     return fetch(
-      "https://express-simple-rgp893--3000.local.webcontainer.io/test/",
+      "https://fls-playground-server.herokuapp.com/api/run/",
       requestOptions
     )
       .then(console.log(requestOptions))

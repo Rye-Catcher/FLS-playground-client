@@ -34,6 +34,9 @@ class PlayGround extends React.Component {
 
     RunApi.run(code)
       .then((response) => {
+        console.log(`status: ${response.runStatus}`);
+        console.log(`msg:\n ${response.message}`);
+        //console.log(`res: ${JSON.stringify(response)}`);
         this.setState({ res: response });
       })
       .catch((error) => {
@@ -61,10 +64,7 @@ class PlayGround extends React.Component {
             </Button>
           </div>
           <div className="result-box">
-            <ResponseBox>
-              show={this.state.res.runStatus}
-              message={this.state.res.message}
-            </ResponseBox>
+            <ResponseBox>res = {String(this.state.res.message)}</ResponseBox>
           </div>
         </div>
       </Container>
