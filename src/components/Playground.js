@@ -64,7 +64,7 @@ class PlayGround extends React.Component {
             </Button>
           </div>
           <div className="result-box">
-            <ResponseBox>res = {String(this.state.res.message)}</ResponseBox>
+            <ResponseBox res={this.state.res.message} />
           </div>
         </div>
       </Container>

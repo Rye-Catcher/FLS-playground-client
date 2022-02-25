@@ -1,5 +1,4 @@
 import React from "react";
-import { FormControl } from "react-bootstrap";
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-java";
@@ -17,23 +16,10 @@ class ResponseBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    console.log(this.props.res);
   }
 
   render() {
-    /*
-    return (
-      <FormControl
-        style={boxStyle}
-        name="code"
-        type="textarea"
-        componentclass="textarea"
-        rows="8"
-        readOnly
-        value={String(this.props.res)}
-        //value={this.props.res}
-      />
-    );*/
+    //console.log(`props.res: ${this.props.res}`);
     return (
       <AceEditor
         style={boxStyle}
