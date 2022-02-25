@@ -8,11 +8,8 @@ import "ace-builds/src-noconflict/theme-monokai";
 
 const editorstyle = {
   boarder: "1px solid lightgray",
-  width: "100%",
-  height: "100%",
-  overflow: "hidden",
-  position: "relative",
-  padding: "10px"
+  width: "inherit",
+  height: "100%"
 };
 
 class Editor extends React.Component {

@@ -6,10 +6,10 @@ import "ace-builds/src-noconflict/theme-monokai";
 
 const boxStyle = {
   boarder: "1px solid lightgray",
-  width: "100%",
-  height: "100%",
-  overflow: "hidden",
-  position: "relative"
+  width: "inherit",
+  height: "50%"
+  //overflow: "hidden",
+  //position: "relative"
 };
 
 class ResponseBox extends React.Component {
@@ -27,15 +27,15 @@ class ResponseBox extends React.Component {
         theme="monokai"
         readOnly
         fontSize={14}
-        showPrintMargin
-        showGutter
+        //showPrintMargin
+        //showGutter
         highlightActiveLine
         value={this.props.res}
         editorProps={{
           $blockScrolling: true
         }}
         setOptions={{
-          showLineNumbers: true,
+          showLineNumbers: false,
           tabSize: 4
         }}
       />

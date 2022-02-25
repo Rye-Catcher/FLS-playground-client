@@ -1,6 +1,7 @@
 import React from "react";
-import { Form, Button, Container } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Editor from "./Editor";
+import Info from "./Info";
 import ResponseBox from "./ResponseBox";
 import RunApi from "./utils/RunApi";
 
@@ -10,7 +11,7 @@ class PlayGround extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      code: "",
+      code: "//1 + 1;",
       res: {
         runStatus: "0",
         message: ""
@@ -45,9 +46,50 @@ class PlayGround extends React.Component {
 
   render() {
     return (
+      <Container fluid className="run-page">
+        <Row>
+          <Col className="editor-panel">
+            <Card className="editor-card">
+              <Card.Body>
+                <Editor
+                  onChange={this.handleCodeChange}
+                  code={this.state.code}
+                />
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col className="view-panel">
+            <Card className="view-card">
+              <Card.Body>
+                <Info />
+                <Button
+                  className="view-run-button"
+                  type="button"
+                  sz="sm"
+                  onClick={this.handleRun}
+                >
+                  Run
+                </Button>
+                <ResponseBox
+                  className="view-result"
+                  res={this.state.res.message}
+                />
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+}
+/*
+  render() {
+    return (
       <Container>
-        <div className="editor">
-          <Editor onChange={this.handleCodeChange} code={this.state.code} />
+        <div className="editor-panel">
+          <div className="editor">
+            <Editor onChange={this.handleCodeChange} code={this.state.code} />
+          </div>
         </div>
         <div className="result-panel">
           <div className="info-box">
@@ -70,5 +112,5 @@ class PlayGround extends React.Component {
     );
   }
 }
-
+*/
 export default PlayGround;

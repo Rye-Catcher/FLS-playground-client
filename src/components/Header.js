@@ -1,13 +1,20 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 
 const Header = () => (
-  <Container>
-    <div className="header-title">
-      <h2> FLite# playground</h2>
-    </div>
-    <hr />
-  </Container>
+  <Navbar className="header" variant="">
+    <Container className="header-content">
+      <Navbar.Brand className="header-title">FLite# Playground </Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse className="justify-content-end">
+        <Navbar.Text className="header-github">
+          <a href="https://github.com/Rye-Catcher/FLS-playground-client/tree/master/">
+            Github
+          </a>
+        </Navbar.Text>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
 );
 
 export default Header;
