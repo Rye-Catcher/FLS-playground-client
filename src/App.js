@@ -1,6 +1,6 @@
 import React from "react";
 //import { Routes, Route } from 'react-router-dom';
-//import Header from './components/Header';
+import Header from "./components/Header";
 //import Footer from './components/Footer';
 import PlayGround from "./components/Playground";
 //import About from './components/About';
@@ -8,6 +8,7 @@ import PlayGround from "./components/Playground";
 function App() {
   return (
     <div>
+      <Header />
       <PlayGround />
     </div>
   );
