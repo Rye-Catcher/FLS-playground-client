@@ -1,6 +1,8 @@
 ## FLite# Playground Client
 
-This website is a playground to try FLite# programming language.
+Check out the [website](https://flitesharp.dev/)!
+
+The client for Flite# playground online interpreter.
 
 FLite# is a subset of F# programming language developed by Team Salamanca as their project for CS4215 module in NUS. You can check it out on <a href="https://github.com/Rye-Catcher/FLiteSharp">GitHub</a>
         
