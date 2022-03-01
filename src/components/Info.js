@@ -10,13 +10,11 @@ const Info = () => (
         FLite# is a subset of F# programming language developed by Team
         Salamanca as their project for CS4215 module in NUS. You can check it
         out on
-        <a href="https://github.com/Rye-Catcher/FLiteSharp">GitHub</a>
+        <a href="https://github.com/Rye-Catcher/FLiteSharp"> GitHub </a>
         <br />
         <br />
-        Currently this platform is only able to parse and simple calculator
-        language. More specifically, it supports basic arithmetic operations{" "}
-        <code>+, -, *, /, **</code> and boolean operations <code>and, or</code>{" "}
-        .
+        Currently this platform supports constant declaration, functions,
+        lambda expressions, and basic arithmetic operations.
         <br />
         <br />
         The first response sent from server may be slow. Please wait.
