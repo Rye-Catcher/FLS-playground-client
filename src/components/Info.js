@@ -12,9 +12,12 @@ const Info = () => (
         out on
         <a href="https://github.com/Rye-Catcher/FLiteSharp"> GitHub </a>
         <br />
+        Feel free to run examples provided in
+        <a href="https://github.com/Rye-Catcher/FLiteSharp/tree/master/app/src/main/resources"> this link </a>
         <br />
-        Currently this platform supports constant declaration, functions,
-        lambda expressions, and basic arithmetic operations.
+        Some interesting features of FLite# are: units of measure and pattern matching. 
+        You can check it
+        <a href="https://github.com/Rye-Catcher/FLiteSharp/blob/master/documentation"> here </a>
         <br />
         <br />
         The first response sent from server may be slow. Please wait.
